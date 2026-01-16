@@ -1,6 +1,10 @@
 # Bike Sharing Dashboard 🚲
 
-Dashboard ini dibuat untuk menganalisis data penyewaan sepeda (Bike Sharing Dataset), melihat pola musiman, dan pengaruh cuaca terhadap jumlah penyewa.
+## Setup Environment - Anaconda
+conda create --name main-ds python=3.9 conda activate main-ds pip install -r requirements.txt
 
-**Link Dashboard:** [https://data-analysis-project-bike-sharing.streamlit.app/](https://data-analysis-project-bike-sharing.streamlit.app/)
+## Setup Environment - Shell/Terminal
+mkdir submission cd submission pip install -r requirements.txt
 
+## Run steamlit app
+streamlit run dashboard/dashboard.py

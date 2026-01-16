@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+import os
 
 # --- Konfigurasi Halaman Website ---
 st.set_page_config(page_title="Proyek Analisis Data - Bike Sharing", layout="wide")
@@ -32,7 +33,9 @@ def create_by_time_category_df(df):
     return df_grouped.reset_index()
 
 # --- Load Data ---
-all_df = pd.read_csv("main_data.csv") # Pastikan file ini ada di folder dashboard
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, 'main_data.csv')
+all_df = pd.read_csv(file_path)
 
 # Pastikan dteday bertipe datetime
 all_df["dteday"] = pd.to_datetime(all_df["dteday"])
